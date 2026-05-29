@@ -2,28 +2,26 @@
    DESIGN SYSTEM & CUSTOM PREMIUM VARIABLES
    ========================================================================== */
 :root {
-    --color-bg-dark: #f8fafc;       /* Slate 50 - clean off-white background */
-    --color-bg-card: #ffffff;       /* Pure White for beautiful cards */
-    --color-bg-glass: rgba(255, 255, 255, 0.85); /* Frosty light glass */
-    --color-border-glass: rgba(15, 23, 42, 0.08); /* Clean modern border */
+    --color-bg-dark: #08080a;       /* Clean deep dark coal-black */
+    --color-bg-card: #141416;       /* Premium dark carbon card */
+    --color-bg-glass: rgba(14, 14, 16, 0.75);
+    --color-border-glass: rgba(255, 255, 255, 0.05);
     
-    --color-primary: #f97316;       /* Vibrant Safety Orange */
-    --color-primary-hover: #ea580c; /* Richer Orange */
-    --color-accent: #1e3a8a;        /* Deep Navy Blue for corporate trust and authority */
-    --color-accent-hover: #1e40af;  /* Medium Blue */
-    --color-accent-gold: #eab308;   /* Bright warm amber for icons/stars */
+    --color-primary: #ff6f00;       /* Rich intense industrial safety orange */
+    --color-primary-hover: #e65100; /* Deeper hover safety orange */
+    --color-accent: #fbbf24;        /* Warm Gold/Amber */
     
-    --color-success: #10b981;       /* Emerald Green for CTA / Go-Ahead */
-    --color-text-main: #0f172a;     /* Slate 900 - professional dark text */
-    --color-text-muted: #475569;    /* Slate 600 - highly readable body copy */
+    --color-success: #10b981;       /* Emerald */
+    --color-text-main: #f4f4f5;     /* Clean White/Zinc */
+    --color-text-muted: #a1a1aa;    /* Muted Zinc Gray */
     
     --font-header: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-premium: 0 10px 30px -10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.02);
-    --shadow-glow: 0 4px 14px rgba(249, 115, 22, 0.3);
-    --shadow-green-glow: 0 4px 14px rgba(16, 185, 129, 0.3);
+    --shadow-premium: 0 10px 30px -10px rgba(0, 0, 0, 0.75);
+    --shadow-glow: 0 0 20px rgba(255, 111, 0, 0.35);
+    --shadow-green-glow: 0 0 20px rgba(16, 185, 129, 0.4);
     
     --border-radius-sm: 8px;
     --border-radius-md: 16px;
@@ -251,7 +249,7 @@ p {
     left: 100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.98);
+    background-color: rgba(8, 8, 10, 0.98);
     z-index: 999;
     transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
@@ -473,8 +471,8 @@ p {
 .form-input {
     width: 100%;
     padding: 16px 20px;
-    background-color: #ffffff;
-    border: 1px solid rgba(15, 23, 42, 0.15);
+    background-color: rgba(8, 8, 10, 0.4);
+    border: 1px solid var(--color-border-glass);
     border-radius: var(--border-radius-md);
     color: var(--color-text-main);
     font-family: var(--font-body);
@@ -549,7 +547,7 @@ section {
    SERVICES GRID SECTION
    ========================================================================== */
 .services-section {
-    background-color: #f1f5f9;
+    background-color: rgba(30, 41, 59, 0.3);
 }
 
 .services-grid {
@@ -783,7 +781,7 @@ section {
    INTERACTIVE CALCULATOR SECTION
    ========================================================================== */
 .calculator-section {
-    background-color: #f1f5f9;
+    background-color: rgba(30, 41, 59, 0.3);
 }
 
 .grid-calculator {
@@ -864,8 +862,8 @@ section {
 }
 
 .calc-service-card {
-    background-color: rgba(15, 23, 42, 0.04);
-    border: 1px solid rgba(15, 23, 42, 0.08);
+    background-color: rgba(8, 8, 10, 0.4);
+    border: 1px solid var(--color-border-glass);
     border-radius: var(--border-radius-md);
     padding: 16px;
     text-align: center;
@@ -903,7 +901,7 @@ section {
     width: 100%;
     height: 6px;
     border-radius: 3px;
-    background: rgba(15, 23, 42, 0.15);
+    background: rgba(255, 255, 255, 0.1);
     outline: none;
 }
 
@@ -915,7 +913,7 @@ section {
     border-radius: 50%;
     background: var(--color-primary);
     cursor: pointer;
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 0 10px var(--color-primary);
     transition: var(--transition-smooth);
 }
 
@@ -970,8 +968,8 @@ section {
     transform: translateY(-50%);
     height: 22px;
     width: 22px;
-    background-color: #ffffff;
-    border: 1px solid rgba(15, 23, 42, 0.15);
+    background-color: rgba(8, 8, 10, 0.4);
+    border: 1px solid var(--color-border-glass);
     border-radius: 6px;
     transition: var(--transition-smooth);
 }
@@ -1090,7 +1088,7 @@ section {
    TESTIMONIALS SECTION
    ========================================================================== */
 .testimonials-section {
-    background-color: #f1f5f9;
+    background-color: rgba(30, 41, 59, 0.3);
 }
 
 .testimonials-grid {
@@ -1215,19 +1213,19 @@ section {
 /* Open Accordion State styling via JS */
 .faq-item.active {
     border-color: rgba(249, 115, 22, 0.25);
-    background-color: rgba(249, 115, 22, 0.02);
+    background-color: rgba(30, 41, 59, 0.5);
 }
 
 .faq-item.active .faq-toggle-icon {
     transform: rotate(45deg);
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 /* ==========================================================================
    CONTACT SECTION & MAP
    ========================================================================== */
 .contact-section {
-    background-color: #f1f5f9;
+    background-color: rgba(30, 41, 59, 0.3);
     border-bottom: 1px solid var(--color-border-glass);
 }
 
@@ -1317,7 +1315,7 @@ section {
 /* Beautiful Glassmorphic Maps Placeholder */
 .contact-map-placeholder {
     height: 450px;
-    background: linear-gradient(rgba(248, 250, 252, 0.8), rgba(248, 250, 252, 0.65)), url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop');
+    background: linear-gradient(rgba(8, 8, 10, 0.85), rgba(8, 8, 10, 0.65)), url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     border: 1px solid var(--color-border-glass);
@@ -1332,13 +1330,12 @@ section {
 
 .map-overlay-content {
     max-width: 420px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(30, 41, 59, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--color-border-glass);
     padding: 36px;
     border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-premium);
 }
 
 .map-icon {
@@ -1350,13 +1347,11 @@ section {
 .map-overlay-content h3 {
     font-size: 1.4rem;
     margin-bottom: 8px;
-    color: var(--color-text-main);
 }
 
 .map-overlay-content p {
     font-size: 0.9rem;
     margin-bottom: 24px;
-    color: var(--color-text-muted);
 }
 
 /* ==========================================================================
@@ -1364,7 +1359,7 @@ section {
    ========================================================================== */
 .main-footer {
     padding: 40px 0;
-    background-color: #0b0f19;
+    background-color: #090d16;
 }
 
 .footer-bottom {
@@ -1372,7 +1367,7 @@ section {
     justify-content: space-between;
     align-items: center;
     font-size: 0.85rem;
-    color: #94a3b8;
+    color: var(--color-text-muted);
 }
 
 .footer-bottom a {
@@ -1389,13 +1384,13 @@ section {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(8, 8, 10, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    border-top: 1px solid var(--color-border-glass);
     padding: 12px 16px;
     z-index: 998;
-    box-shadow: 0 -5px 25px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .sticky-phone-btn {
@@ -1582,75 +1577,5 @@ section {
     
     .before-after-container {
         height: 250px;
-    }
-}
-
-/* ==========================================================================
-   TRUST GUARANTEES SECTION
-   ========================================================================== */
-.trust-guarantees-section {
-    padding: 60px 0;
-    background-color: #0c0c0e;
-    border-bottom: 1px solid var(--color-border-glass);
-    margin-top: -40px;
-    position: relative;
-    z-index: 10;
-}
-
-.guarantees-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.guarantee-card {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.guarantee-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    background-color: rgba(255, 111, 0, 0.1);
-    color: var(--color-primary);
-    border-radius: 50%;
-    font-size: 1.5rem;
-    flex-shrink: 0;
-    font-weight: bold;
-}
-
-.guarantee-content h4 {
-    font-size: 1.1rem;
-    color: var(--color-text-main);
-    margin-bottom: 8px;
-    font-family: var(--font-header);
-    font-weight: 700;
-}
-
-.guarantee-content p {
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-    line-height: 1.5;
-}
-
-@media (max-width: 1024px) {
-    .guarantees-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-    }
-}
-
-@media (max-width: 600px) {
-    .guarantees-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .trust-guarantees-section {
-        padding: 40px 0;
-        margin-top: 0;
     }
 }
