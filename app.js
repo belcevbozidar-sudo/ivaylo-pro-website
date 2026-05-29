@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Pricing rates table
     const serviceRates = {
         kurti: {
-            base: 8,           // per m2
+            base: 15,          // per m2 (BGN)
             minVal: 5,
             maxVal: 150,
             defVal: 20,
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             label: '2. Обем на работа (Квадратни метри - м²):'
         },
         chisti: {
-            base: 6,           // per m3
+            base: 10,          // per m3 (BGN)
             minVal: 2,
             maxVal: 60,
             defVal: 8,
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             label: '2. Количество боклуци (Кубични метри - м³):'
         },
         izvozva: {
-            base: 35,          // per course/dumpster
+            base: 70,          // per course/dumpster (BGN)
             minVal: 1,
             maxVal: 8,
             defVal: 1,
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             label: '2. Брой курсове с камион (извозване):'
         },
         hamali: {
-            base: 12,          // per hour per worker (standardized)
+            base: 25,          // per hour per worker (BGN)
             minVal: 2,
             maxVal: 24,
             defVal: 3,
@@ -162,14 +162,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Apply flat addons
         if (checkHeavy && checkHeavy.checked) {
-            finalPrice += 20;   // Heavy items fee in Euro
+            finalPrice += 40;   // Heavy items fee in BGN (40 лв.)
         }
         if (checkDistance && checkDistance.checked) {
-            finalPrice += 20;   // Surcharge outside city limits in Euro
+            finalPrice += 40;   // Surcharge outside city limits in BGN (40 лв.)
         }
 
-        // Apply absolute minimum price thresholds in Euro
-        const minimums = { kurti: 40, chisti: 30, izvozva: 35, hamali: 25 };
+        // Apply absolute minimum price thresholds in BGN
+        const minimums = { kurti: 80, chisti: 60, izvozva: 70, hamali: 50 };
         if (finalPrice < minimums[activeService]) {
             finalPrice = minimums[activeService];
         }
@@ -354,10 +354,12 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.style.padding = '10px 0';
-                header.style.backgroundColor = 'rgba(15, 23, 42, 0.9)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 20px -10px rgba(15, 23, 42, 0.15)';
             } else {
                 header.style.padding = '16px 0';
                 header.style.backgroundColor = 'var(--color-bg-glass)';
+                header.style.boxShadow = '';
             }
         });
     }
