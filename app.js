@@ -251,6 +251,30 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const statNumbers = document.querySelectorAll('.stat-number');
 
+    function animateStat(element, targetNum) {
+        const duration = 2000; // 2 seconds animation
+        const startTime = performance.now();
+        const startNum = 0;
+
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Ease out quad formula
+            const easeProgress = progress * (2 - progress);
+            const currentValue = Math.floor(startNum + (targetNum - startNum) * easeProgress);
+            
+            element.textContent = currentValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                element.textContent = targetNum;
+            }
+        }
+        requestAnimationFrame(update);
+    }
+
     if (statNumbers.length > 0) {
         const observerOptions = {
             threshold: 0.5,
@@ -262,18 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (entry.isIntersecting) {
                     const targetEl = entry.target;
                     const targetNum = parseInt(targetEl.getAttribute('data-target'));
-                    let currentNum = 0;
-                    const step = targetNum / 50; // Dynamic step based on target size
-                    const interval = setInterval(() => {
-                        currentNum += step;
-                        if (currentNum >= targetNum) {
-                            targetEl.textContent = targetNum;
-                            clearInterval(interval);
-                        } else {
-                            targetEl.textContent = Math.floor(currentNum);
-                        }
-                    }, 20);
-                    
+                    animateStat(targetEl, targetNum);
                     observer.unobserve(targetEl);
                 }
             });
